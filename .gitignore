@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables / secrets
+.env
+.env.*
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python packaging
+*.egg-info/
+dist/
+build/
+
+# Logs
+*.log
+
+# ML artifacts
+runs/
+runs_1/
+wandb/
+mlruns/
+
+# Large datasets
+datasets/
+data/
+
+# Model weights
+*.pt
+*.pth
+*.onnx
+*.engine
+*.safetensors
+
+# TensorFlow
+*.h5
+
+# Temporary files
+*.tmp

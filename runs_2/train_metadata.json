@@ -1,0 +1,12 @@
+{
+    "epoch": 28,
+    "precision": 0.957201,
+    "recall": 0.935459,
+    "f1_score": 0.946205,
+    "mAP50": 0.966075,
+    "mAP50-95": 0.848201,
+    "best_weights": "C:\\Users\\Shakiru\\ML\\Weapon_Detection\\rfdetr\\runs\\checkpoint_best_total.pth",
+    "regular_weight": "C:\\Users\\Shakiru\\ML\\Weapon_Detection\\rfdetr\\runs\\checkpoint_best_regular.pth",
+    "ema_weights": "C:\\Users\\Shakiru\\ML\\Weapon_Detection\\rfdetr\\runs\\checkpoint_best_ema.pth",
+    "last_weights": "C:\\Users\\Shakiru\\ML\\Weapon_Detection\\rfdetr\\runs\\last.ckpt"
+}

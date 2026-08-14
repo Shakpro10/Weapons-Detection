@@ -1,0 +1,301 @@
+{
+  "train_config": {
+    "lr": 0.0001,
+    "lr_encoder": 0.00015,
+    "batch_size": 8,
+    "grad_accum_steps": 2,
+    "auto_batch_target_effective": 16,
+    "auto_batch_max_targets_per_image": 100,
+    "auto_batch_ema_headroom": 0.7,
+    "epochs": 100,
+    "resume": "C:\\Users\\Shakiru\\ML\\Weapon_Detection\\rfdetr\\runs\\last.ckpt",
+    "ema_decay": 0.993,
+    "ema_tau": 100,
+    "lr_drop": 100,
+    "checkpoint_interval": 5,
+    "skip_best_epochs": 0,
+    "warmup_epochs": 0.0,
+    "lr_vit_layer_decay": 0.8,
+    "lr_component_decay": 0.7,
+    "drop_path": 0.0,
+    "group_detr": 13,
+    "ia_bce_loss": true,
+    "cls_loss_coef": 1.0,
+    "num_select": 300,
+    "dataset_file": "roboflow",
+    "square_resize_div_64": true,
+    "dataset_dir": "C:\\Users\\Shakiru\\ML\\Weapon_Detection\\rfdetr\\dataset\\Weapons_Detection_New_v2_version_2_yolo26",
+    "output_dir": "C:\\Users\\Shakiru\\ML\\Weapon_Detection\\rfdetr\\runs",
+    "multi_scale": true,
+    "expanded_scales": true,
+    "do_random_resize_via_padding": false,
+    "use_ema": true,
+    "ema_update_interval": 1,
+    "num_workers": 10,
+    "weight_decay": 0.0001,
+    "early_stopping": true,
+    "early_stopping_patience": 10,
+    "early_stopping_min_delta": 0.005,
+    "early_stopping_use_ema": true,
+    "progress_bar": "tqdm",
+    "tensorboard": true,
+    "wandb": false,
+    "mlflow": false,
+    "clearml": false,
+    "project": null,
+    "run": null,
+    "class_names": null,
+    "run_test": false,
+    "segmentation_head": false,
+    "eval_max_dets": 500,
+    "eval_interval": 1,
+    "log_per_class_metrics": true,
+    "aug_config": {
+      "RandomBrightnessContrast": {
+        "brightness_limit": 0.35,
+        "contrast_limit": 0.35,
+        "p": 0.7
+      },
+      "HueSaturationValue": {
+        "hue_shift_limit": 15,
+        "sat_shift_limit": 50,
+        "val_shift_limit": 40,
+        "p": 0.5
+      },
+      "RGBShift": {
+        "r_shift_limit": 15,
+        "g_shift_limit": 15,
+        "b_shift_limit": 15,
+        "p": 0.25
+      },
+      "CLAHE": {
+        "clip_limit": 4.0,
+        "tile_grid_size": [
+          8,
+          8
+        ],
+        "p": 0.25
+      },
+      "Sharpen": {
+        "alpha": [
+          0.2,
+          0.5
+        ],
+        "lightness": [
+          0.75,
+          1.0
+        ],
+        "p": 0.2
+      },
+      "ToGray": {
+        "p": 0.12
+      },
+      "GaussianBlur": {
+        "blur_limit": [
+          3,
+          7
+        ],
+        "p": 0.2
+      },
+      "MotionBlur": {
+        "blur_limit": [
+          3,
+          9
+        ],
+        "p": 0.25
+      },
+      "GaussNoise": {
+        "std_range": [
+          0.02,
+          0.1
+        ],
+        "p": 0.25
+      },
+      "ImageCompression": {
+        "quality_range": [
+          50,
+          90
+        ],
+        "p": 0.45
+      },
+      "Downscale": {
+        "scale_range": [
+          0.5,
+          0.9
+        ],
+        "p": 0.2
+      },
+      "HorizontalFlip": {
+        "p": 0.5
+      },
+      "Affine": {
+        "translate_percent": {
+          "x": [
+            -0.1,
+            0.1
+          ],
+          "y": [
+            -0.1,
+            0.1
+          ]
+        },
+        "scale": [
+          0.5,
+          1.5
+        ],
+        "rotate": [
+          -15,
+          15
+        ],
+        "shear": {
+          "x": [
+            -3,
+            3
+          ],
+          "y": [
+            -3,
+            3
+          ]
+        },
+        "fill": 0,
+        "p": 0.65
+      },
+      "Perspective": {
+        "scale": [
+          0.02,
+          0.07
+        ],
+        "p": 0.35
+      },
+      "RandomRain": {
+        "slant_range": [
+          -10,
+          10
+        ],
+        "drop_length": 20,
+        "drop_width": 1,
+        "drop_color": [
+          200,
+          200,
+          200
+        ],
+        "blur_value": 2,
+        "brightness_coefficient": 0.9,
+        "rain_type": "drizzle",
+        "p": 0.08
+      },
+      "RandomFog": {
+        "fog_coef_range": [
+          0.1,
+          0.3
+        ],
+        "alpha_coef": 0.08,
+        "p": 0.1
+      },
+      "RandomShadow": {
+        "shadow_roi": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "num_shadows_limit": [
+          1,
+          3
+        ],
+        "shadow_dimension": 5,
+        "p": 0.35
+      },
+      "CoarseDropout": {
+        "num_holes_range": [
+          1,
+          8
+        ],
+        "hole_height_range": [
+          13,
+          101
+        ],
+        "hole_width_range": [
+          13,
+          101
+        ],
+        "fill": 0,
+        "p": 0.3
+      }
+    },
+    "augmentation_backend": "cpu",
+    "save_dataset_grids": false,
+    "notes": null,
+    "accelerator": "auto",
+    "clip_max_norm": 0.1,
+    "seed": null,
+    "sync_bn": false,
+    "strategy": "auto",
+    "devices": 1,
+    "num_nodes": 1,
+    "fp16_eval": false,
+    "lr_scheduler": "step",
+    "lr_min_factor": 0.0,
+    "dont_save_weights": false,
+    "train_log_sync_dist": false,
+    "train_log_on_step": false,
+    "compute_val_loss": true,
+    "compute_test_loss": true,
+    "pin_memory": true,
+    "persistent_workers": true,
+    "prefetch_factor": 4
+  },
+  "model_config": {
+    "encoder": "dinov2_windowed_small",
+    "out_feature_indexes": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "dec_layers": 3,
+    "two_stage": true,
+    "projector_scale": [
+      "P4"
+    ],
+    "hidden_dim": 256,
+    "patch_size": 16,
+    "num_windows": 2,
+    "sa_nheads": 8,
+    "ca_nheads": 16,
+    "dec_n_points": 2,
+    "num_queries": 300,
+    "num_select": 300,
+    "bbox_reparam": true,
+    "lite_refpoint_refine": true,
+    "layer_norm": true,
+    "amp": true,
+    "num_channels": 3,
+    "num_classes": 5,
+    "pretrain_weights": "C:\\Users\\Shakiru\\.roboflow\\models\\rf-detr-small.pth",
+    "device": "cuda",
+    "resolution": 672,
+    "group_detr": 13,
+    "gradient_checkpointing": false,
+    "compile": false,
+    "fused_optimizer": true,
+    "positional_encoding_size": 42,
+    "ia_bce_loss": true,
+    "cls_loss_coef": 1.0,
+    "segmentation_head": false,
+    "mask_downsample_ratio": 4,
+    "backbone_lora": false,
+    "freeze_encoder": false,
+    "license": "Apache-2.0",
+    "model_name": "RFDETRSmall"
+  },
+  "model_config_type": "RFDETRSmallConfig",
+  "class_names": [
+    "Handgun",
+    "Heavy Weapon",
+    "Knife",
+    "Rifle",
+    "Rocket_Grenade Launcher"
+  ],
+  "num_classes": 5
+}
